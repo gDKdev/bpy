@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/dkr/CLionProjects/bpy/main.cpp
+fstream
+-
+iostream
+-
+sstream
+-
+trim_string.hpp
+C:/Users/dkr/CLionProjects/bpy/trim_string.hpp
+
+C:/Users/dkr/CLionProjects/bpy/trim_string.hpp
+algorithm
+-
+cctype
+-
+locale
+-
+
