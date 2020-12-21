@@ -1,3 +1,0 @@
-C:\tools\msys64\mingw64\bin\cmake.exe -E rm -f CMakeFiles\bpy.dir/objects.a
-C:\tools\msys64\mingw64\bin\ar.exe cr CMakeFiles\bpy.dir/objects.a @CMakeFiles\bpy.dir\objects1.rsp
-C:\tools\msys64\mingw64\bin\g++.exe -g -Wl,--whole-archive CMakeFiles\bpy.dir/objects.a -Wl,--no-whole-archive -o bpy.exe -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\bpy.dir\linklibs.rsp
