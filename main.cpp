@@ -59,7 +59,13 @@ int main(int argc, char **argv) {
                 }
 
                 // Add indented line
-                brackified << string(indention_level, '\t') << line << endl;
+                if (indention_level > 0) {
+                    line = ltrim(line);
+                    brackified << string(indention_level, '\t') << line << endl;
+                } else {
+                    brackified << line << endl;
+                }
+
 
                 // Increase indention and clear marker
                 if (increment_indention) {
