@@ -62,7 +62,9 @@ int main(int argc, char **argv) {
                 if (indention_level > 0) {
                     line = ltrim(line);
                     brackified << string(indention_level, '\t') << line << endl;
-                } else {
+                }
+                    // Add original line
+                else {
                     brackified << line << endl;
                 }
 
