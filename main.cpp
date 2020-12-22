@@ -23,10 +23,10 @@ int main(int argc, char **argv) {
         for (string line; getline(input, line);) {
             // Ignore shebang to bpy
             if (line.starts_with("#!"));
-                // Rewrite shebang replacement
-            else if (line.starts_with("##!"))
+            // Rewrite shebang replacement
+            else if (line.starts_with("##!")) {
                 brackified << "#!" << line.substr(3) << endl;
-            else {
+            } else {
                 // Remove spaces after line
                 rtrim(line);
 
@@ -35,7 +35,7 @@ int main(int argc, char **argv) {
                     if (skip_reduce > 0) {
                         skip_reduce--;
                     }
-                        // Reduce indention on } and skip symbol
+                    // Reduce indention on } and skip symbol
                     else {
                         string ltrim = ltrim_copy(line);
                         if (ltrim.starts_with('}') && indention_level > 0) {
@@ -51,7 +51,7 @@ int main(int argc, char **argv) {
                     if (line.ends_with("= {")) {
                         skip_reduce++;
                     }
-                        // Mark to increase indention and skip symbol
+                    // Mark to increase indention and skip symbol
                     else {
                         increment_indention = true;
                         line = line.substr(0, line.size() - 1);
@@ -63,9 +63,10 @@ int main(int argc, char **argv) {
                     line = ltrim(line);
                     brackified << string(indention_level, '\t') << line << endl;
                 }
-                    // Add original line
-                else
+                // Add original line
+                else {
                     brackified << line << endl;
+                }
 
                 // Increase indention and clear marker
                 if (increment_indention) {
@@ -77,9 +78,10 @@ int main(int argc, char **argv) {
         input.close();
 
         // Output result to console
-        if (argc == 2)
+        if (argc == 2) {
             cout << brackified.str();
-            // Output to file
+        }
+        // Output to file
         else {
             cout << "Output to file '" << argv[2] << "'..." << endl;
             ofstream output(argv[2]);
