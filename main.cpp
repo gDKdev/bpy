@@ -64,10 +64,8 @@ int main(int argc, char **argv) {
                     brackified << string(indention_level, '\t') << line << endl;
                 }
                     // Add original line
-                else {
+                else
                     brackified << line << endl;
-                }
-
 
                 // Increase indention and clear marker
                 if (increment_indention) {
